@@ -1,0 +1,19 @@
+{
+  "name": "hugoblocks",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Hugo Theme: Hugoblocks build-tools (bootstrap, sass)",
+  "scripts": {
+    "build": "node-sass-chokidar --source-map true ./src/main.scss -o ./static/css/",
+    "watch": "chokidar 'src/**/*.scss' -c 'npm run build'"
+  },
+  "author": "lsenta",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.1.3",
+    "chokidar": "^2.0.4",
+    "chokidar-cli": "^1.2.1",
+    "node-sass-chokidar": "^1.3.3"
+  }
+}

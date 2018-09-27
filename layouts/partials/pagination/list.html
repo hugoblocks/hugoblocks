@@ -1,0 +1,29 @@
+<nav aria-label="Blog List">
+    <ul class="pagination">
+    {{ if .Paginator.HasNext }}
+        <li class="page-item">
+            <a class="page-link" href="{{ .Paginator.Next.URL }}">Previous</a>
+        </li>
+    {{ else }}
+        <li class="page-item disabled">
+            <span class="page-link">Previous</span>
+        </li>
+    {{ end }}
+
+        <li class="page-item disabled">
+            <span class="page-link">
+                Page {{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }}
+            </span>
+        </li>
+
+    {{ if .Paginator.HasPrev }}
+        <li class="page-item">
+            <a class="page-link" href="{{ .Paginator.Prev.URL }}">Next</a>
+        </li>
+    {{ else }}
+        <li class="page-item disabled">
+            <span class="page-link">Next</span>
+        </li>
+    {{ end }}
+    </ul>
+</nav>

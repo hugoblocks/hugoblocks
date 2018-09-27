@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="single">
+{{ partial "blocks" . }}
+
+{{ with .Params.cover }}
+    <div class="cover"
+         style="background-image: url('{{ . | absURL }}');"
+    ></div>
+{{ end }}
+
+    <section class="main">
+    {{ partial "categories" . }}
+
+        <h1>{{ .Title }}</h1>
+
+    {{ .Content }}
+
+    {{ partial "tags" . }}
+    {{ partial "pagination/single" . }}
+    {{ partial "subscribe.html" . }}
+
+        <div class="comments">
+        {{ template "_internal/disqus.html" . }}
+        </div>
+    </section>
+</div>
+{{ end }}

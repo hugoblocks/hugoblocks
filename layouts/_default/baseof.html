@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="{{ if .Params.LanguageCode }}{{ .Params.LanguageCode }}{{ else }}{{ $.Site.LanguageCode }}{{ end }}">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:url" content="{{ .Permalink }}"/>
+
+{{ with $.Site.Params.Analytics.Google }}
+    {{ partial "analytics/google.html" . }}
+{{ end }}
+
+{{ with $.Site.Params.favicon }}
+    <link rel="icon" href="{{ . }}">
+{{ end }}
+
+{{ with .Params.SEO.Description | default .Params.Description | default $.Site.Params.SEO.Description }}
+    <meta name="description" content="{{ . }}">
+    <meta property="og:description" content="{{ . }}"/>
+    <meta name="twitter:description" content="{{ . }}"/>
+{{ end }}
+
+{{ with .Params.SEO.Keywords | default $.Site.Params.SEO.Keywords }}
+    <meta name="keywords" content="{{ range $i, $e := . }}{{- if $i }},{{ end }}{{ $e }}{{ end }}">
+{{ end }}
+
+{{ with .Params.SEO.Title | default .Params.Title | default $.Site.Params.SEO.Title | default $.Site.Title }}
+    <meta property="og:title" content="{{ . }}"/>
+    <meta name="twitter:title" content="{{ . }}"/>
+{{ end }}
+
+{{ if eq .Kind "page" }}
+    <meta property="og:type" content="article"/>
+    <meta name="twitter:card" content="summary"/>
+{{ end }}
+
+{{ with $.Site.Author.twitter }}
+    <meta name="twitter:site" content="@{{ . }}"/>
+{{ end }}
+
+{{ with .Params.cover | default $.Site.Params.cover }}
+    <meta property="og:image" content="{{ $.Site.BaseURL }}{{ . }}"/>
+    <meta name="twitter:image" content="{{ $.Site.BaseURL }}{{ . }}"/>
+{{ end }}
+
+{{ if .IsTranslated }}
+{{ range .Translations }}
+    <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}"/>
+{{ end }}
+{{ end }}
+
+    <!-- Page Title -->
+    <title>
+    {{- block "title" . -}}
+        {{ with .Params.SEO.Title | default .Params.Title | default $.Site.Params.SEO.Title | default $.Site.Title }}
+        {{ . }}
+        {{ end }}
+    {{- end -}}
+    </title>
+
+    <!-- HugoBlocks -->
+    <script src="/js/smooth-scroll.polyfills.min.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Font Awesome, PRO 5.1.0 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/regular.css"
+          integrity="sha384-6kuJOVhnZHzJdVIZJcWiMZVi/JwinbqLbVxIbR73nNqXnYJDQ5TGtf+3XyASO4Am" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/brands.css"
+          integrity="sha384-C1HxUFJBptCeaMsYCbPUw8fdL2Cblu3mJZilxrfujE+7QLr8BfuzBl5rPLNM61F6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/fontawesome.css"
+          integrity="sha384-PnWzJku7hTqk2JREATthkLpYeVVGcBbXG5yEzk7hD2HIr/VxffIDfNSR7p7u4HUy" crossorigin="anonymous">
+</head>
+<body>
+{{ block "header" . }}
+{{ partial "components/header.html" . }}
+{{ end }}
+
+{{ block "main" . }}
+{{ end }}
+
+{{ block "footer" . }}
+{{ partial "components/footer.html" . }}
+{{ end }}
+
+<script>
+    var scroll = new SmoothScroll("a[href*=\"#\"]")
+</script>
+
+<!-- Bootstrap 4.1.3 -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</html>

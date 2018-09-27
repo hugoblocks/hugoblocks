@@ -1,0 +1,52 @@
+{{ with .content }}
+<div class="hero">
+    <div class="content">
+        <div class="pic">
+            <img src="{{ .image }}"/>
+        </div>
+
+        <div class="intro">
+            <h1 class="headline">
+            {{ .headline | markdownify }}
+            </h1>
+
+        {{ with .tagline }}
+            <h2 class="tagline ">
+            {{ . | markdownify }}
+            </h2>
+        {{ end }}
+
+            <div class="leads">
+            {{ range .notes }}
+                <p class="lead lead-{{ .priority }}">
+                {{ .headline | safeHTML }}
+                </p>
+            {{ end }}
+            </div>
+        </div>
+    </div>
+
+{{ with .actions }}
+    <div class="cta">
+    {{ with .left }}
+        <div class="left">
+            <a href="{{ .url }}" role="button"
+               data-scroll
+            >
+            {{ .name }}
+            </a>
+        </div>
+    {{ end }}
+    {{ with .right }}
+        <div class="right">
+            <a href="{{ .url }}" role="button"
+               data-scroll
+            >
+            {{ .name }}
+            </a>
+        </div>
+    {{ end }}
+    </div>
+</div>
+{{ end }}
+{{ end }}

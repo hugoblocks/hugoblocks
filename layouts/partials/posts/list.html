@@ -1,0 +1,9 @@
+{{ $paginator := .Paginator.Pages.ByDate.Reverse }}
+
+{{ range $i, $e :=  $paginator }}
+<div class="item {{ if modBool $i 2 }}even{{ else }}odd{{ end }}">
+{{ partial "posts/summary.html" . }}
+</div>
+{{ end }}
+
+{{ partial "pagination/list" . }}

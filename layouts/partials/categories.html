@@ -1,0 +1,15 @@
+{{ with .Param "categories" }}
+<h4 class="categories">
+{{ range . }}
+{{ $name := . }}
+{{ with $.Site.GetPage (printf   "/categories/%s" $name) }}
+    <a href="{{ .Permalink }}" title="{{   $name }}">
+    {{ with .Params.icon }}
+        <i class="far {{ . }} mr-1"></i>
+    {{ end }}
+    {{ $name }}
+    </a>
+{{ end }}
+{{ end }}
+</h4>
+{{ end }}

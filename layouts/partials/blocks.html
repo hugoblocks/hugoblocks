@@ -1,0 +1,4 @@
+{{ range .Params.blocks }}
+    {{ $block := (printf "%s%s" "blocks/" .kind ) }}
+    {{ partial $block (dict "content" . "Site" $.Site) }}
+{{ end }}

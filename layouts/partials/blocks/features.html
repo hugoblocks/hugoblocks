@@ -1,0 +1,29 @@
+<div class="features">
+    <h2>
+    {{ .content.title }}
+    </h2>
+
+    <div class="items">
+    {{ range $i, $e := .content.items }}
+    {{ $count := $e | len }}
+        <div class="item order-{{ if $e.main }}1{{ else }}{{ add $i 2 }}{{ end }}">
+
+        {{ with .title }}
+            <h3>{{ . | markdownify }}</h3>
+        {{ end }}
+
+        {{ with .image }}
+            <img src="{{ . | markdownify }}"/>
+        {{ end }}
+
+        {{ with .tagline }}
+            <p class="tagline">{{ . | markdownify }}</p>
+        {{ end }}
+
+        {{ with .copy }}
+            <p class="copy">{{ . | markdownify }}</p>
+        {{ end }}
+        </div>
+    {{ end }}
+    </div>
+</div>

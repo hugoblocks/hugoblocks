@@ -1,0 +1,43 @@
+<div class="header">
+    <nav class="main-navbar ">
+    {{ with $.Site }}
+        <a class="brand" href="{{ .BaseURL }}">
+        {{ if .Params.Navbar.Logo }}
+            <img src="{{ .Params.Navbar.Logo }}" alt="{{ .Title }}">
+        {{ else }}
+            {{ .Title }}
+        {{ end }}
+        </a>
+    {{ end }}
+
+        <button class="collapse-button" type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <i class="far fa-bars"></i>
+        </button>
+
+        <div class="collapsable-content" id="navbarNav">
+            <div>
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            {{ if .Page }}
+
+                <a class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}"
+                {{ if .Pre }}
+                   target="{{ .Pre }}"
+                {{ end }}
+                   href="{{ .URL | absLangURL }}">
+                {{ with .Page.Params.icon }}
+                    <i class="far {{ . }} mr-1"></i>
+                {{ end }}
+                {{ .Name }}
+                </a>
+            {{ end }}
+            {{ end }}
+
+            {{ partial "components/i18n-switch" . }}
+            </div>
+        </div>
+    </nav>
+</div>

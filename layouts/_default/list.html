@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="list">
+{{ partial "blocks" . }}
+
+    <section class="main items">
+    {{ partial "posts/list" . }}
+    </section>
+
+{{ partial "subscribe.html" . }}
+</div>
+{{ end }}

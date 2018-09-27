@@ -1,0 +1,28 @@
+<nav aria-label="Blog Single">
+    <ul class="pagination">
+    {{ if .Next }}
+        <li class="page-item">
+            <a class="page-link" href="{{ .Next.URL }}">
+                <i class="far fa-angle-left"></i>
+            {{ .Next.Title }}
+            </a>
+        </li>
+    {{ end }}
+
+        <li class="page-item">
+            <a class="page-link" href="{{ (.Section | urlize) | absLangURL }}">
+                <i class="far fa-angle-up"></i>
+                Articles
+            </a>
+        </li>
+
+    {{ if .Prev }}
+        <li class="page-item">
+            <a class="page-link" href="{{ .Prev.URL }}">
+            {{ .Prev.Title }}
+                <i class="far fa-angle-right"></i>
+            </a>
+        </li>
+    {{ end }}
+    </ul>
+</nav>

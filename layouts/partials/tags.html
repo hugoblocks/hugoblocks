@@ -1,0 +1,16 @@
+{{ with .Param "tags" }}
+<h4 class="tags">
+    Published in:
+{{ range . }}
+{{ $name := . }}
+{{ with $.Site.GetPage (printf   "/tags/%s" $name) }}
+    <a href="{{ .Permalink }}" title="{{   $name }}">
+    {{ with .Params.icon }}
+        <i class="far {{ . }} mr-1"></i>
+    {{ end }}
+    {{ $name }}
+    </a>
+{{ end }}
+{{ end }}
+</h4>
+{{ end }}

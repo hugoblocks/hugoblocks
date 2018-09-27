@@ -1,0 +1,13 @@
+<div itemscope itemtype="http://schema.org/CreativeWork" class="{{ .Section }} content">
+    <h2 itemprop="headline">
+        <a href="{{ .Permalink }}">
+        {{ .Title }}
+        </a>
+    </h2>
+    <p itemprop="description">
+    {{ .Description }}
+    </p>
+    <a href="{{ .Permalink }}">
+    {{ i18n "readmore" }}
+    </a>
+</div>

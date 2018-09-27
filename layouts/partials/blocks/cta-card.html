@@ -1,0 +1,24 @@
+{{ with .content }}
+<div class="cta-card">
+    <div class="">
+        <div class="body">
+        {{ with .title }}
+            <h2 id="cta">
+            {{ . }}
+            </h2>
+        {{ end }}
+
+        {{ with .body }}
+            <p>
+            {{ . }}
+            </p>
+        {{ end }}
+
+        {{ with .action }}
+            <a target="_blank" href="{{ .url }}">
+                <i class="far fa-download" aria-hidden="true"></i> {{ .detail }}</a>
+        {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

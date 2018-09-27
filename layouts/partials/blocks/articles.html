@@ -1,0 +1,35 @@
+{{ with .content }}
+<div {{ with .id }}id="{{ . }}"{{ end }} class="articles">
+    <h2>
+    {{ .title }}
+    </h2>
+
+    <div class="items">
+    {{ range $i, $e := .items }}
+    {{ $count := $e | len }}
+        <div class="item {{ if not .alwaysVisible }}hide-on-small{{ end }}">
+            <div class="body">
+                <h3 class="title">
+                    <a href="{{ .url }}">
+                    {{ .heading }}
+                    </a>
+                </h3>
+                <p class="tagline">{{ .tagline }}</p>
+            </div>
+
+        {{ with .tags }}
+            <div class="footer tags">
+                <p>
+                {{ range $j, $p := . }}
+                    <span class="tag">
+                    {{ $p }}
+                    </span>
+                {{ end }}
+                </p>
+            </div>
+        {{ end }}
+        </div>
+    {{ end }}
+    </div>
+</div>
+{{ end }}
