@@ -25,6 +25,26 @@
       tagline:
       copy:
 
+- kind: references
+  id:
+  title:
+  items:
+    - url:
+      image:
+      name:
+
+- kind: projects
+  id:
+  title:
+  items:
+    - title:
+      tagline:
+      alwaysVisible:
+      badges:
+        - a
+        - b
+        - c
+
 - kind: contact
   id:
   TODO

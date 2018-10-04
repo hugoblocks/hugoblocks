@@ -1,0 +1,23 @@
+{{ with .content }}
+<div {{ with .id }}id="{{ . }}"{{ end }} class="references">
+    <div class="container">
+
+        <h2>{{ .title }}</h2>
+
+        <div class="items">
+        {{ $references := .items }}
+
+        {{ range $i, $e := $references }}
+        {{ $references_count := $e | len }}
+            <div class="item">
+                <a href="{{ .url }}" target="_blank">
+                    <img src="{{ .image }}"
+                         alt="icon depicting {{ .name }}"
+                    />
+                </a>
+            </div>
+        {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}
