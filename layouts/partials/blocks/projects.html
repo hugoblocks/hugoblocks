@@ -1,0 +1,34 @@
+{{ with .content }}
+<div {{ with .id }}id="{{ . }}"{{ end }} class="projects">
+    <h2>
+    {{ .title }}
+    </h2>
+
+    <div class="items">
+
+    {{ range $i, $e := .items }}
+    {{ $count := $e | len }}
+    {{/*TODO: This alwaysVisible mechanism is not ideal*/}}
+        <div class="item{{ if .alwaysVisible }}priority-0{{ else }}priority-1{{ end }}">
+            <div class="body">
+                <h3>{{ .title }}</h3>
+                <p>{{ .tagline }}</p>
+            </div>
+
+        {{ with .badges }}
+            <div class="badges">
+                <p>
+                {{ range $j, $p := . }}
+                    <span class="badge">
+                    {{ $p }}
+                    </span>
+                {{ end }}
+                </p>
+            </div>
+        {{ end }}
+
+        </div>
+    {{ end }}
+    </div>
+</div>
+{{ end }}
