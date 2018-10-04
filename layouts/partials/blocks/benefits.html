@@ -12,10 +12,14 @@
         {{ $benefits_count := $e | len }}
             <div class="item order-{{ if $e.main }}1{{ else }}{{ add $i 2 }}{{ end }}">
                 <h3>
-                {{ .heading | markdownify }}
+                {{ .title | markdownify }}
                 </h3>
             {{ with .tagline }}
                 <p class="tagline">{{.}}</p>
+            {{ end }}
+            {{ with .image }}
+            {{/*TODO: missing fields*/}}
+                <img src="{{ . }}"/>
             {{ end }}
 
             {{ with .copy }}

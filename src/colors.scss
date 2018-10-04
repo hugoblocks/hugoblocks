@@ -9,20 +9,20 @@ $heavy-green: #38620F;
 $vibrant-green: #6CAF2C;
 
 $heavy-blue: #031842;
-$heavy-red: #7C2A11;
+$heavy-red: #A72F30;
 $vibrant-red: #FB6233;
 
 $white: #FFF;
 
 // ## Override Bootstrap Defaults
-$primary: $vibrant-green;
-$secondary: $heavy-blue;
-$info: $heavy-green;
+$primary: $heavy-red;
+$secondary: $heavy-red;
+$info: $corporate-dark;
 
 $body-bg: $balanced-white;
 $body-color: $corporate-dark;
 
-$body-bg-invert: $secondary;
+$body-bg-invert: $corporate-dark;
 $body-color-invert: $white;
 $headings-color-invert: $white;
 

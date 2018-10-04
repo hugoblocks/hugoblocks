@@ -10,7 +10,6 @@
 .landing {
   h2 {
     text-align: center;
-    color: $balanced-white;
     font-weight: 200;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -22,8 +21,9 @@
 
   .hero {
     @extend .container-fluid;
+    @extend .invert;
+
     min-height: 63vh;
-    margin-top: 6vh;
     position: relative;
     padding-top: 10rem;
     padding-bottom: 5rem;
@@ -132,25 +132,31 @@
       @extend .justify-content-center;
 
       .item {
+        @extend .card;
         @extend .mt-2;
-        @extend .col-12;
-        @extend .col-md-4;
+        @extend .ml-1;
+        @extend .col-11;
+        @extend .col-md-3;
+
+        padding: 1rem;
 
         img {
           @extend .img-fluid;
         }
 
         .tagline {
+          @extend .card-title;
         }
 
         .copy {
+          @extend .card-text;
         }
       }
     }
   }
 
-  .cta-card {
-    margin: auto;
+  .action-card {
+    margin: 2rem auto auto;
     width: 60%;
 
     & > div {
@@ -179,7 +185,8 @@
     @extend .container-fluid;
     @extend .invert;
     margin-bottom: 0;
-    margin-top: 2rem;
+    margin-top: 0;
+
     padding-top: 2rem;
     padding-bottom: 2rem;
 

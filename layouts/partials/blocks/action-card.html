@@ -1,5 +1,5 @@
 {{ with .content }}
-<div class="cta-card">
+<div {{ with .id }}id="{{ . }}"{{ end }} class="action-card">
     <div class="">
         <div class="body">
         {{ with .title }}
@@ -15,8 +15,10 @@
         {{ end }}
 
         {{ with .action }}
-            <a target="_blank" href="{{ .url }}">
-                <i class="far fa-download" aria-hidden="true"></i> {{ .detail }}</a>
+            <a
+            {{ with .target }}target="{{ . }}"{{ end }}
+            href="{{ if .url }}{{ .url }}{{ else }}{{ relref $.Page .ref }}{{ end }}">
+            {{ .name | markdownify }}</a>
         {{ end }}
         </div>
     </div>

@@ -6,8 +6,8 @@
         </div>
 
         <div class="intro">
-            <h1 class="headline">
-            {{ .headline | markdownify }}
+            <h1 class="title">
+            {{ .title | markdownify }}
             </h1>
 
         {{ with .tagline }}
@@ -19,7 +19,7 @@
             <div class="leads">
             {{ range .notes }}
                 <p class="lead lead-{{ .priority }}">
-                {{ .headline | safeHTML }}
+                {{ .title | safeHTML }}
                 </p>
             {{ end }}
             </div>
