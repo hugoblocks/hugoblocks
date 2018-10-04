@@ -4,3 +4,18 @@ other = "In English / Anglais"
 [fr]
 other = "In French / Français"
 
+[readmore]
+other = "Read More"
+
+[subscribe_header]
+other = "Subscribe"
+
+[field_name]
+other = "Name"
+
+[field_email]
+other = "Email"
+
+[subscribe]
+other = "Subscribe"
+
