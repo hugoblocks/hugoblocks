@@ -4,8 +4,8 @@
     <div class="content" id="mc_embed_signup">
         <form action="{{ .Site.Params.mailchimpAction }}" method="post" id="mc-embedded-subscribe-form"
               name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        {{ if and (isset . "content") (isset .content "tagline") }}
-            <h2>{{ .content.tagline }}</h2>
+        {{ if and (isset . "content") (isset .content "title") }}
+            <h2>{{ .content.title }}</h2>
         {{ else }}
             <h2>{{ i18n "contact"}}</h2>
         {{ end }}

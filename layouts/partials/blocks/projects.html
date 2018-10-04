@@ -9,7 +9,7 @@
     {{ range $i, $e := .items }}
     {{ $count := $e | len }}
     {{/*TODO: This alwaysVisible mechanism is not ideal*/}}
-        <div class="item{{ if .alwaysVisible }}priority-0{{ else }}priority-1{{ end }}">
+        <div class="item {{ if .alwaysVisible }}priority-0{{ else }}priority-1{{ end }}">
             <div class="body">
                 <h3>{{ .title }}</h3>
                 <p>{{ .tagline }}</p>
