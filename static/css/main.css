@@ -295,7 +295,7 @@ template {
     size: a3; }
   body {
     min-width: 992px !important; }
-  .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+  .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
     min-width: 992px !important; }
   .navbar, .main-navbar {
     display: none; }
@@ -323,6 +323,10 @@ template {
 body {
   scroll-behavior: smooth; }
 
+.redirection {
+  text-align: center;
+  padding-top: 1rem; }
+
 .navbar, .main-navbar {
   position: relative;
   display: flex;
@@ -330,7 +334,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem; }
-  .navbar > .container, .main-navbar > .container, .navbar > .header, .main-navbar > .header, .navbar > .footer, .main-navbar > .footer, .landing .navbar > .features, .landing .main-navbar > .features, .landing .benefits.navbar > div, .landing .benefits.main-navbar > div, .landing .navbar > .articles, .landing .main-navbar > .articles, .list .navbar > .items, .list .main-navbar > .items, .navbar > .single, .main-navbar > .single,
+  .navbar > .container, .main-navbar > .container, .navbar > .redirection, .main-navbar > .redirection, .navbar > .header, .main-navbar > .header, .navbar > .footer, .main-navbar > .footer, .landing .navbar > .features, .landing .main-navbar > .features, .landing .benefits.navbar > div, .landing .benefits.main-navbar > div, .landing .navbar > .articles, .landing .main-navbar > .articles, .list .navbar > .items, .list .main-navbar > .items, .navbar > .single, .main-navbar > .single,
   .navbar > .container-fluid,
   .main-navbar > .container-fluid,
   .landing .navbar > .hero,
@@ -400,7 +404,7 @@ body {
   background-size: 100% 100%; }
 
 @media (max-width: 575.98px) {
-  .navbar-expand-sm > .container, .main-navbar > .container, .navbar-expand-sm > .header, .main-navbar > .header, .navbar-expand-sm > .footer, .main-navbar > .footer, .landing .navbar-expand-sm > .features, .landing .main-navbar > .features, .landing .benefits.navbar-expand-sm > div, .landing .benefits.main-navbar > div, .landing .navbar-expand-sm > .articles, .landing .main-navbar > .articles, .list .navbar-expand-sm > .items, .list .main-navbar > .items, .navbar-expand-sm > .single, .main-navbar > .single,
+  .navbar-expand-sm > .container, .main-navbar > .container, .navbar-expand-sm > .redirection, .main-navbar > .redirection, .navbar-expand-sm > .header, .main-navbar > .header, .navbar-expand-sm > .footer, .main-navbar > .footer, .landing .navbar-expand-sm > .features, .landing .main-navbar > .features, .landing .benefits.navbar-expand-sm > div, .landing .benefits.main-navbar > div, .landing .navbar-expand-sm > .articles, .landing .main-navbar > .articles, .list .navbar-expand-sm > .items, .list .main-navbar > .items, .navbar-expand-sm > .single, .main-navbar > .single,
   .navbar-expand-sm > .container-fluid,
   .main-navbar > .container-fluid,
   .landing .navbar-expand-sm > .hero,
@@ -423,7 +427,7 @@ body {
       .navbar-expand-sm .navbar-nav .nav-link, .main-navbar .navbar-nav .nav-link, .main-navbar .navbar-expand-sm .collapsable-content > div .nav-link, .main-navbar .collapsable-content > div .nav-link, .navbar-expand-sm .navbar-nav .main-navbar .collapse-button, .main-navbar .navbar-nav .collapse-button, .main-navbar .navbar-expand-sm .collapsable-content > div .collapse-button, .main-navbar .collapsable-content > div .collapse-button, .navbar-expand-sm .navbar-nav .main-navbar .collapsable-content a, .main-navbar .navbar-nav .collapsable-content a, .main-navbar .collapsable-content .navbar-nav a, .navbar-expand-sm .main-navbar .collapsable-content > div a, .main-navbar .navbar-expand-sm .collapsable-content > div a, .main-navbar .collapsable-content > div a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-sm > .container, .main-navbar > .container, .navbar-expand-sm > .header, .main-navbar > .header, .navbar-expand-sm > .footer, .main-navbar > .footer, .landing .navbar-expand-sm > .features, .landing .main-navbar > .features, .landing .benefits.navbar-expand-sm > div, .landing .benefits.main-navbar > div, .landing .navbar-expand-sm > .articles, .landing .main-navbar > .articles, .list .navbar-expand-sm > .items, .list .main-navbar > .items, .navbar-expand-sm > .single, .main-navbar > .single,
+    .navbar-expand-sm > .container, .main-navbar > .container, .navbar-expand-sm > .redirection, .main-navbar > .redirection, .navbar-expand-sm > .header, .main-navbar > .header, .navbar-expand-sm > .footer, .main-navbar > .footer, .landing .navbar-expand-sm > .features, .landing .main-navbar > .features, .landing .benefits.navbar-expand-sm > div, .landing .benefits.main-navbar > div, .landing .navbar-expand-sm > .articles, .landing .main-navbar > .articles, .list .navbar-expand-sm > .items, .list .main-navbar > .items, .navbar-expand-sm > .single, .main-navbar > .single,
     .navbar-expand-sm > .container-fluid,
     .main-navbar > .container-fluid,
     .landing .navbar-expand-sm > .hero,
@@ -440,7 +444,7 @@ body {
       display: none; } }
 
 @media (max-width: 767.98px) {
-  .navbar-expand-md > .container, .navbar-expand-md > .header, .navbar-expand-md > .footer, .landing .navbar-expand-md > .features, .landing .benefits.navbar-expand-md > div, .landing .navbar-expand-md > .articles, .list .navbar-expand-md > .items, .navbar-expand-md > .single,
+  .navbar-expand-md > .container, .navbar-expand-md > .redirection, .navbar-expand-md > .header, .navbar-expand-md > .footer, .landing .navbar-expand-md > .features, .landing .benefits.navbar-expand-md > div, .landing .navbar-expand-md > .articles, .list .navbar-expand-md > .items, .navbar-expand-md > .single,
   .navbar-expand-md > .container-fluid,
   .landing .navbar-expand-md > .hero,
   .landing .navbar-expand-md > .benefits,
@@ -459,7 +463,7 @@ body {
       .navbar-expand-md .navbar-nav .nav-link, .navbar-expand-md .main-navbar .collapsable-content > div .nav-link, .main-navbar .navbar-expand-md .collapsable-content > div .nav-link, .navbar-expand-md .navbar-nav .main-navbar .collapse-button, .main-navbar .navbar-expand-md .navbar-nav .collapse-button, .navbar-expand-md .main-navbar .collapsable-content > div .collapse-button, .main-navbar .navbar-expand-md .collapsable-content > div .collapse-button, .navbar-expand-md .navbar-nav .main-navbar .collapsable-content a, .main-navbar .collapsable-content .navbar-expand-md .navbar-nav a, .navbar-expand-md .main-navbar .collapsable-content > div a, .main-navbar .navbar-expand-md .collapsable-content > div a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-md > .container, .navbar-expand-md > .header, .navbar-expand-md > .footer, .landing .navbar-expand-md > .features, .landing .benefits.navbar-expand-md > div, .landing .navbar-expand-md > .articles, .list .navbar-expand-md > .items, .navbar-expand-md > .single,
+    .navbar-expand-md > .container, .navbar-expand-md > .redirection, .navbar-expand-md > .header, .navbar-expand-md > .footer, .landing .navbar-expand-md > .features, .landing .benefits.navbar-expand-md > div, .landing .navbar-expand-md > .articles, .list .navbar-expand-md > .items, .navbar-expand-md > .single,
     .navbar-expand-md > .container-fluid,
     .landing .navbar-expand-md > .hero,
     .landing .navbar-expand-md > .benefits,
@@ -472,7 +476,7 @@ body {
       display: none; } }
 
 @media (max-width: 991.98px) {
-  .navbar-expand-lg > .container, .navbar-expand-lg > .header, .navbar-expand-lg > .footer, .landing .navbar-expand-lg > .features, .landing .benefits.navbar-expand-lg > div, .landing .navbar-expand-lg > .articles, .list .navbar-expand-lg > .items, .navbar-expand-lg > .single,
+  .navbar-expand-lg > .container, .navbar-expand-lg > .redirection, .navbar-expand-lg > .header, .navbar-expand-lg > .footer, .landing .navbar-expand-lg > .features, .landing .benefits.navbar-expand-lg > div, .landing .navbar-expand-lg > .articles, .list .navbar-expand-lg > .items, .navbar-expand-lg > .single,
   .navbar-expand-lg > .container-fluid,
   .landing .navbar-expand-lg > .hero,
   .landing .navbar-expand-lg > .benefits,
@@ -491,7 +495,7 @@ body {
       .navbar-expand-lg .navbar-nav .nav-link, .navbar-expand-lg .main-navbar .collapsable-content > div .nav-link, .main-navbar .navbar-expand-lg .collapsable-content > div .nav-link, .navbar-expand-lg .navbar-nav .main-navbar .collapse-button, .main-navbar .navbar-expand-lg .navbar-nav .collapse-button, .navbar-expand-lg .main-navbar .collapsable-content > div .collapse-button, .main-navbar .navbar-expand-lg .collapsable-content > div .collapse-button, .navbar-expand-lg .navbar-nav .main-navbar .collapsable-content a, .main-navbar .collapsable-content .navbar-expand-lg .navbar-nav a, .navbar-expand-lg .main-navbar .collapsable-content > div a, .main-navbar .navbar-expand-lg .collapsable-content > div a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-lg > .container, .navbar-expand-lg > .header, .navbar-expand-lg > .footer, .landing .navbar-expand-lg > .features, .landing .benefits.navbar-expand-lg > div, .landing .navbar-expand-lg > .articles, .list .navbar-expand-lg > .items, .navbar-expand-lg > .single,
+    .navbar-expand-lg > .container, .navbar-expand-lg > .redirection, .navbar-expand-lg > .header, .navbar-expand-lg > .footer, .landing .navbar-expand-lg > .features, .landing .benefits.navbar-expand-lg > div, .landing .navbar-expand-lg > .articles, .list .navbar-expand-lg > .items, .navbar-expand-lg > .single,
     .navbar-expand-lg > .container-fluid,
     .landing .navbar-expand-lg > .hero,
     .landing .navbar-expand-lg > .benefits,
@@ -504,7 +508,7 @@ body {
       display: none; } }
 
 @media (max-width: 1199.98px) {
-  .navbar-expand-xl > .container, .navbar-expand-xl > .header, .navbar-expand-xl > .footer, .landing .navbar-expand-xl > .features, .landing .benefits.navbar-expand-xl > div, .landing .navbar-expand-xl > .articles, .list .navbar-expand-xl > .items, .navbar-expand-xl > .single,
+  .navbar-expand-xl > .container, .navbar-expand-xl > .redirection, .navbar-expand-xl > .header, .navbar-expand-xl > .footer, .landing .navbar-expand-xl > .features, .landing .benefits.navbar-expand-xl > div, .landing .navbar-expand-xl > .articles, .list .navbar-expand-xl > .items, .navbar-expand-xl > .single,
   .navbar-expand-xl > .container-fluid,
   .landing .navbar-expand-xl > .hero,
   .landing .navbar-expand-xl > .benefits,
@@ -523,7 +527,7 @@ body {
       .navbar-expand-xl .navbar-nav .nav-link, .navbar-expand-xl .main-navbar .collapsable-content > div .nav-link, .main-navbar .navbar-expand-xl .collapsable-content > div .nav-link, .navbar-expand-xl .navbar-nav .main-navbar .collapse-button, .main-navbar .navbar-expand-xl .navbar-nav .collapse-button, .navbar-expand-xl .main-navbar .collapsable-content > div .collapse-button, .main-navbar .navbar-expand-xl .collapsable-content > div .collapse-button, .navbar-expand-xl .navbar-nav .main-navbar .collapsable-content a, .main-navbar .collapsable-content .navbar-expand-xl .navbar-nav a, .navbar-expand-xl .main-navbar .collapsable-content > div a, .main-navbar .navbar-expand-xl .collapsable-content > div a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-xl > .container, .navbar-expand-xl > .header, .navbar-expand-xl > .footer, .landing .navbar-expand-xl > .features, .landing .benefits.navbar-expand-xl > div, .landing .navbar-expand-xl > .articles, .list .navbar-expand-xl > .items, .navbar-expand-xl > .single,
+    .navbar-expand-xl > .container, .navbar-expand-xl > .redirection, .navbar-expand-xl > .header, .navbar-expand-xl > .footer, .landing .navbar-expand-xl > .features, .landing .benefits.navbar-expand-xl > div, .landing .navbar-expand-xl > .articles, .list .navbar-expand-xl > .items, .navbar-expand-xl > .single,
     .navbar-expand-xl > .container-fluid,
     .landing .navbar-expand-xl > .hero,
     .landing .navbar-expand-xl > .benefits,
@@ -538,7 +542,7 @@ body {
 .navbar-expand {
   flex-flow: row nowrap;
   justify-content: flex-start; }
-  .navbar-expand > .container, .navbar-expand > .header, .navbar-expand > .footer, .landing .navbar-expand > .features, .landing .benefits.navbar-expand > div, .landing .navbar-expand > .articles, .list .navbar-expand > .items, .navbar-expand > .single,
+  .navbar-expand > .container, .navbar-expand > .redirection, .navbar-expand > .header, .navbar-expand > .footer, .landing .navbar-expand > .features, .landing .benefits.navbar-expand > div, .landing .navbar-expand > .articles, .list .navbar-expand > .items, .navbar-expand > .single,
   .navbar-expand > .container-fluid,
   .landing .navbar-expand > .hero,
   .landing .navbar-expand > .benefits,
@@ -552,7 +556,7 @@ body {
     .navbar-expand .navbar-nav .nav-link, .navbar-expand .main-navbar .collapsable-content > div .nav-link, .main-navbar .navbar-expand .collapsable-content > div .nav-link, .navbar-expand .navbar-nav .main-navbar .collapse-button, .main-navbar .navbar-expand .navbar-nav .collapse-button, .navbar-expand .main-navbar .collapsable-content > div .collapse-button, .main-navbar .navbar-expand .collapsable-content > div .collapse-button, .navbar-expand .navbar-nav .main-navbar .collapsable-content a, .main-navbar .collapsable-content .navbar-expand .navbar-nav a, .navbar-expand .main-navbar .collapsable-content > div a, .main-navbar .navbar-expand .collapsable-content > div a {
       padding-right: 0.5rem;
       padding-left: 0.5rem; }
-  .navbar-expand > .container, .navbar-expand > .header, .navbar-expand > .footer, .landing .navbar-expand > .features, .landing .benefits.navbar-expand > div, .landing .navbar-expand > .articles, .list .navbar-expand > .items, .navbar-expand > .single,
+  .navbar-expand > .container, .navbar-expand > .redirection, .navbar-expand > .header, .navbar-expand > .footer, .landing .navbar-expand > .features, .landing .benefits.navbar-expand > div, .landing .navbar-expand > .articles, .list .navbar-expand > .items, .navbar-expand > .single,
   .navbar-expand > .container-fluid,
   .landing .navbar-expand > .hero,
   .landing .navbar-expand > .benefits,
@@ -1956,23 +1960,23 @@ a.btn-circle {
     .main-navbar .collapsable-content a:hover {
       color: #A72F30 !important; }
 
-.container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+.container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 540px; } }
   @media (min-width: 768px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 960px; } }
   @media (min-width: 1200px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 1140px; } }
 
 .container-fluid, .landing .hero, .landing .benefits, .landing .contact {
@@ -4707,23 +4711,23 @@ a.btn-circle {
   .mx-xl-auto {
     margin-left: auto !important; } }
 
-.container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+.container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 540px; } }
   @media (min-width: 768px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 960px; } }
   @media (min-width: 1200px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 1140px; } }
 
 .container-fluid, .landing .hero, .landing .benefits, .landing .contact {
@@ -6614,23 +6618,23 @@ a.btn-circle {
       border: 1px solid #f0f0f0;
       border-radius: 0.5rem; }
 
-.container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+.container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 540px; } }
   @media (min-width: 768px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 960px; } }
   @media (min-width: 1200px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 1140px; } }
 
 .container-fluid, .landing .hero, .landing .benefits, .landing .contact {
@@ -8392,23 +8396,23 @@ a.btn-circle {
 .align-text-top {
   vertical-align: text-top !important; }
 
-.container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+.container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 540px; } }
   @media (min-width: 768px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 960px; } }
   @media (min-width: 1200px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 1140px; } }
 
 .container-fluid, .landing .hero, .landing .benefits, .landing .contact {
@@ -9634,23 +9638,23 @@ a.btn-circle {
         font-size: 1.1rem;
         font-weight: 200; }
 
-.container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+.container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 540px; } }
   @media (min-width: 768px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 960px; } }
   @media (min-width: 1200px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 1140px; } }
 
 .container-fluid, .landing .hero, .landing .benefits, .landing .contact {
@@ -10940,23 +10944,23 @@ a.btn-circle {
 .align-text-top {
   vertical-align: text-top !important; }
 
-.container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+.container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 540px; } }
   @media (min-width: 768px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 960px; } }
   @media (min-width: 1200px) {
-    .container, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
+    .container, .redirection, .header, .footer, .landing .features, .landing .benefits > div, .landing .articles, .list .items, .single {
       max-width: 1140px; } }
 
 .container-fluid, .landing .hero, .landing .benefits, .landing .contact {
