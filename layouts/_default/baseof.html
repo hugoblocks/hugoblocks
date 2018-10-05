@@ -49,6 +49,10 @@
 {{ end }}
 {{ end }}
 
+{{ with .Params.redirect }}
+    <meta http-equiv="refresh" content="0; url={{ . }}"/>
+{{ end }}
+
     <!-- Page Title -->
     <title>
     {{- block "title" . -}}
@@ -75,8 +79,17 @@
 {{ partial "components/header.html" . }}
 {{ end }}
 
+{{ if .Params.redirect }}
+<div class="redirection">
+    <h2>
+        Redirecting to the latest version...
+        Please click <a href="{{ .Params.redirect }}">here</a> if nothing happens.
+    </h2>
+</div>
+{{ else }}
 {{ block "main" . }}
 {{ end }}
+        {{ end }}
 
 {{ block "footer" . }}
 {{ partial "components/footer.html" . }}

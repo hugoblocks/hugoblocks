@@ -29,6 +29,12 @@ body {
   scroll-behavior: smooth;
 }
 
+.redirection {
+  @extend .container;
+  text-align: center;
+  padding-top: 1rem;
+}
+
 @import "./components/header";
 @import "./components/footer";
 @import "./components/landing";
