@@ -14,9 +14,11 @@
                 <h3>
                 {{ .title | markdownify }}
                 </h3>
+
             {{ with .tagline }}
-                <p class="tagline">{{.}}</p>
+                <p class="tagline">{{ . | markdownify }}</p>
             {{ end }}
+
             {{ with .image }}
             {{/*TODO: missing fields*/}}
                 <img src="{{ . }}"/>
