@@ -4,27 +4,27 @@
     <div class="content" id="mc_embed_signup">
         <form action="{{ .Site.Params.mailchimpAction }}" method="post" id="mc-embedded-subscribe-form"
               name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        {{ if and (isset . "content") (isset .content "title") }}
-            <h2>{{ .content.title }}</h2>
-        {{ else }}
-            <h2>{{ i18n "contact"}}</h2>
-        {{ end }}
+            {{ if and (isset . "content") (isset .content "title") }}
+                <h2>{{ .content.title }}</h2>
+            {{ else }}
+                <h2>{{ i18n "contact"}}</h2>
+            {{ end }}
 
             <div id="mc_embed_signup_scroll">
 
                 <div class="row">
                     <div class="mc-field-group col-12 col-md-6 form-group">
-                        <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                        <label for="mce-EMAIL">{{ i18n "field_email"}}<span class="asterisk">*</span></label>
                         <input type="email" value="" name="EMAIL" class="required email form-control"
                                id="mce-EMAIL"/>
                     </div>
                     <div class="mc-field-group col-12 col-md-6 form-group">
-                        <label for="mce-NAME">Name </label>
+                        <label for="mce-NAME">{{ i18n "field_name" }}</label>
                         <input type="text" value="" name="NAME" class="form-control" id="mce-NAME"/>
                     </div>
                 </div>
                 <div class="mc-field-group form-group">
-                    <label for="mce-MESSAGE">I need help with... <span class="asterisk">*</span>
+                    <label for="mce-MESSAGE">{{ i18n "field_help_me_with" }}<span class="asterisk">*</span>
                     </label>
                     <textarea type="text" value="" name="MESSAGE"
                               class="required form-control"
