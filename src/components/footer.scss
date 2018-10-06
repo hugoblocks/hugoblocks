@@ -8,6 +8,11 @@
   margin-top: 4rem;
   margin-bottom: 2rem;
 
+  .copyright {
+    text-align: center;
+    color: $white;
+  }
+
   .links {
     @extend .row;
     @extend .text-center;
