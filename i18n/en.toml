@@ -16,6 +16,9 @@ other = "Name"
 [field_email]
 other = "Email"
 
+[field_help_me_with]
+other = "I need help with..."
+
 [subscribe]
 other = "Subscribe"
 
