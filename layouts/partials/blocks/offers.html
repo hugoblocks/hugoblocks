@@ -1,0 +1,45 @@
+{{ with .content }}
+    <div {{ with .id }}id="{{ . }}"{{ end }} class="offers">
+        <div>
+            <h2>
+                {{ .title }}
+            </h2>
+
+            <div class="items">
+                {{ $benefits := .items }}
+
+                {{ range $i, $e := $benefits }}
+                    {{ $benefits_count := $e | len }}
+                    <div class="item order-{{ if $e.main }}1{{ else }}{{ add $i 2 }}{{ end }}">
+                        <h3>
+                            {{ .title | markdownify }}
+                        </h3>
+                        {{ with .tagline }}
+                            <p class="tagline">{{.}}</p>
+                        {{ end }}
+                        {{ with .image }}
+                            {{/*TODO: missing fields*/}}
+                            <img src="{{ . }}"/>
+                        {{ end }}
+                        {{ with .copy }}
+                            <p class="copy">{{.}}</p>
+                        {{ end }}
+                        {{ with .action }}
+                            <a class="action" href="{{ .url }}">{{ .name }}</a>
+                        {{ end }}
+                    </div>
+                {{ end }}
+            </div>
+
+            {{ with .more }}
+                <div class="more">
+                    <h3>{{ .title | markdownify }}</h3>
+
+                    {{ with .tagline }}
+                        <p>{{ . }}</p>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </div>
+{{ end }}
