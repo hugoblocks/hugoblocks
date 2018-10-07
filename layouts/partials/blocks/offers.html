@@ -17,9 +17,9 @@
                         {{ with .tagline }}
                             <p class="tagline">{{.}}</p>
                         {{ end }}
-                        {{ with .image }}
+                        {{ if .image }}
                             {{/*TODO: missing fields*/}}
-                            <img src="{{ . }}"/>
+                            <img src="{{ .image }}" {{ with .image_alt}}alt="{{ . }}"{{ end }}/>
                         {{ end }}
                         {{ with .copy }}
                             <p class="copy">{{.}}</p>

@@ -1,23 +1,25 @@
 {{ with .content }}
-<div {{ with .id }}id="{{ . }}"{{ end }} class="references">
-    <div class="container">
+    <div {{ with .id }}id="{{ . }}"{{ end }} class="references">
+        <div class="container">
 
-        <h2>{{ .title }}</h2>
+            <h2>{{ .title }}</h2>
 
-        <div class="items">
-        {{ $references := .items }}
+            <div class="items">
+                {{ $references := .items }}
 
-        {{ range $i, $e := $references }}
-        {{ $references_count := $e | len }}
-            <div class="item">
-                <a href="{{ .url }}" target="_blank">
-                    <img src="{{ .image }}"
-                         alt="icon depicting {{ .name }}"
-                    />
-                </a>
+                {{ range $i, $e := $references }}
+                    {{ $references_count := $e | len }}
+                    <div class="item">
+                        <a href="{{ .url }}" target="_blank">
+                            <img src="{{ .image }}"
+                                    {{ with .image_alt }}
+                                        alt="{{ . }}"
+                                    {{ end }}
+                            />
+                        </a>
+                    </div>
+                {{ end }}
             </div>
-        {{ end }}
         </div>
     </div>
-</div>
 {{ end }}
