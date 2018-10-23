@@ -19,7 +19,7 @@
             <div class="leads">
             {{ range .leads }}
                 <p class="lead lead-{{ .priority }}">
-                {{ .title | safeHTML }}
+                {{ .title | markdownify }}
                 </p>
             {{ end }}
             </div>
@@ -33,7 +33,7 @@
             <a href="{{ .url }}" role="button"
                data-scroll
             >
-            {{ .name }}
+            {{ .name | markdownify }}
             </a>
         </div>
     {{ end }}
@@ -42,7 +42,7 @@
             <a href="{{ .url }}" role="button"
                data-scroll
             >
-            {{ .name }}
+            {{ .name | markdownify }}
             </a>
         </div>
     {{ end }}
