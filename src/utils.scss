@@ -7,7 +7,14 @@
 .push-down-wrapper {
   position: absolute;
   bottom: 0;
-  left: 0;
+  // left: 0;
+}
+
+.push-down-wrapper-and-center {
+  @extend .push-down-wrapper;
+
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .btn-circle {
