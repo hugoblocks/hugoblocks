@@ -75,6 +75,7 @@
           integrity="sha384-PnWzJku7hTqk2JREATthkLpYeVVGcBbXG5yEzk7hD2HIr/VxffIDfNSR7p7u4HUy" crossorigin="anonymous">
 
     {{ partial "components/drift.html" . }}
+    {{ partial "components/freshchat-a.html" . }}
 </head>
 <body>
 {{ block "header" . }}
@@ -111,5 +112,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+{{ partial "components/freshchat-b.html" . }}
 </body>
 </html>
