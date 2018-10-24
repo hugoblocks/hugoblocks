@@ -6,60 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta property="og:url" content="{{ .Permalink }}"/>
 
-{{ with $.Site.Params.Analytics.Google }}
+    {{ with $.Site.Params.Analytics.Google }}
     {{ partial "analytics/google.html" . }}
-{{ end }}
+    {{ end }}
 
-{{ with $.Site.Params.favicon }}
+    {{ with $.Site.Params.favicon }}
     <link rel="icon" href="{{ . }}">
-{{ end }}
+    {{ end }}
 
-{{ with .Params.SEO.Description | default .Params.Description | default $.Site.Params.SEO.Description }}
+    {{ with .Params.SEO.Description | default .Params.Description | default $.Site.Params.SEO.Description }}
     <meta name="description" content="{{ . }}">
     <meta property="og:description" content="{{ . }}"/>
     <meta name="twitter:description" content="{{ . }}"/>
-{{ end }}
+    {{ end }}
 
-{{ with .Params.SEO.Keywords | default $.Site.Params.SEO.Keywords }}
+    {{ with .Params.SEO.Keywords | default $.Site.Params.SEO.Keywords }}
     <meta name="keywords" content="{{ range $i, $e := . }}{{- if $i }},{{ end }}{{ $e }}{{ end }}">
-{{ end }}
+    {{ end }}
 
-{{ with .Params.SEO.Title | default .Params.Title | default $.Site.Params.SEO.Title | default $.Site.Title }}
+    {{ with .Params.SEO.Title | default .Params.Title | default $.Site.Params.SEO.Title | default $.Site.Title }}
     <meta property="og:title" content="{{ . }}"/>
     <meta name="twitter:title" content="{{ . }}"/>
-{{ end }}
+    {{ end }}
 
-{{ if eq .Kind "page" }}
+    {{ if eq .Kind "page" }}
     <meta property="og:type" content="article"/>
     <meta name="twitter:card" content="summary"/>
-{{ end }}
+    {{ end }}
 
-{{ with $.Site.Author.twitter }}
+    {{ with $.Site.Author.twitter }}
     <meta name="twitter:site" content="@{{ . }}"/>
-{{ end }}
+    {{ end }}
 
-{{ with .Params.cover | default $.Site.Params.cover }}
+    {{ with .Params.cover | default $.Site.Params.cover }}
     <meta property="og:image" content="{{ $.Site.BaseURL }}{{ . }}"/>
     <meta name="twitter:image" content="{{ $.Site.BaseURL }}{{ . }}"/>
-{{ end }}
+    {{ end }}
 
-{{ if .IsTranslated }}
-{{ range .Translations }}
+    {{ if .IsTranslated }}
+    {{ range .Translations }}
     <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}"/>
-{{ end }}
-{{ end }}
+    {{ end }}
+    {{ end }}
 
-{{ with .Params.redirect }}
+    {{ with .Params.redirect }}
     <meta http-equiv="refresh" content="0; url={{ . }}"/>
-{{ end }}
+    {{ end }}
 
     <!-- Page Title -->
     <title>
-    {{- block "title" . -}}
+        {{- block "title" . -}}
         {{ with .Params.SEO.Title | default .Params.Title | default $.Site.Params.SEO.Title | default $.Site.Title }}
         {{ . }}
         {{ end }}
-    {{- end -}}
+        {{- end -}}
     </title>
 
     <!-- HugoBlocks -->
@@ -73,6 +73,8 @@
           integrity="sha384-C1HxUFJBptCeaMsYCbPUw8fdL2Cblu3mJZilxrfujE+7QLr8BfuzBl5rPLNM61F6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/fontawesome.css"
           integrity="sha384-PnWzJku7hTqk2JREATthkLpYeVVGcBbXG5yEzk7hD2HIr/VxffIDfNSR7p7u4HUy" crossorigin="anonymous">
+
+    {{ partial "components/drift.html" . }}
 </head>
 <body>
 {{ block "header" . }}
@@ -89,14 +91,14 @@
 {{ else }}
 {{ block "main" . }}
 {{ end }}
-        {{ end }}
+{{ end }}
 
 {{ block "footer" . }}
 {{ partial "components/footer.html" . }}
 {{ end }}
 
 <script>
-    var scroll = new SmoothScroll("a[href*=\"#\"]")
+  var scroll = new SmoothScroll("a[href*=\"#\"]")
 </script>
 
 <!-- Bootstrap 4.1.3 -->
