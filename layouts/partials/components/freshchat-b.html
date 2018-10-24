@@ -1,0 +1,8 @@
+{{ with $.Site.Params.Freshchat }}
+<script>
+  window.fcWidget.init({
+    token: "{{ . }}",
+    host: "https://wchat.freshchat.com"
+  });
+</script>
+{{ end }}
