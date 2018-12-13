@@ -22,7 +22,6 @@
             {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
             {{ if .Page }}
-
                 <a class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}"
                 {{ if .Pre }}
                    target="{{ .Pre }}"
@@ -31,7 +30,7 @@
                 {{ with .Page.Params.icon }}
                     <i class="far {{ . }} mr-1"></i>
                 {{ end }}
-                {{ .Name }}
+                {{ .Page.Params.Name | default .Name }}
                 </a>
             {{ end }}
             {{ end }}
