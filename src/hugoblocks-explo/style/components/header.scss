@@ -48,6 +48,10 @@
       margin-left: 1rem;
       text-align: center;
 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       &:hover {
         opacity: 0.9;
         text-decoration: none;
