@@ -1,0 +1,32 @@
+@import "../../../bootstrap/utilities/_align";
+@import "../../../bootstrap/_grid";
+@import "../colors.scss";
+@import "../utils";
+
+%subscribe {
+  @extend .text-center;
+  color: #222;
+  margin-top: 2rem;
+
+  .content {
+    @extend .justify-content-center;
+
+    .field {
+      @extend .form-group;
+    }
+
+    form {
+      @extend .col-8;
+      @extend .col-sm-8;
+      @extend .col-lg-6;
+      @extend .text-center;
+
+      margin: auto;
+      padding: 2rem;
+
+      background-color: darken($white, 4%);
+      border: 1px solid darken($white, 6%);
+      border-radius: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+$balanced-white: #FBFCFD;
+$light-white: #F4EFE7;
+$main-red: #B5170D;
+$stable-grey: #353535;
+$relax-blue: #3C6E71;
+$highlight-violet: #331E36;
+
+$heavy-purple: #140D22;
+$discrete-purple: #211734;
+$vibrant-purple: #8B5AE3;
+$heavy-yellow: #F1B61A;
+$warm-yellow: #F1B61A;
+
+$white: #FFF;
+
+// ## Override Bootstrap Defaults
+$primary: $main-red;
+// $secondary: $heavy-blue;
+// $info: $heavy-green;
+
+$body-bg: $light-white;
+$body-color: $stable-grey;
+
+$body-bg-invert: $primary;
+$body-color-invert: $white;
+$headings-color-invert: $white;

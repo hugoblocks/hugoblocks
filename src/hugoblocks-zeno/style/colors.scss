@@ -1,0 +1,28 @@
+$balanced-white: #FBFCFD;
+$corporate-dark: #1E1E24;
+$corporate-grey: #E0E0E0;
+
+$light-grey: #F9F9F9;
+$light-grey-border: #f3f3f3;
+
+$heavy-green: #38620F;
+$vibrant-green: #6CAF2C;
+
+$heavy-blue: #031842;
+$heavy-red: #7C2A11;
+$vibrant-red: #FB6233;
+
+$white: #FFF;
+
+// ## Override Bootstrap Defaults
+$primary: $vibrant-green;
+$secondary: $heavy-blue;
+$info: $heavy-green;
+
+$body-bg: $balanced-white;
+$body-color: $corporate-dark;
+
+$body-bg-invert: $secondary;
+$body-color-invert: $white;
+$headings-color-invert: $white;
+

@@ -1,0 +1,85 @@
+@import "../../../bootstrap/grid";
+@import "../../../bootstrap/utilities/background";
+@import "../colors.scss";
+@import "../utils";
+@import "./forms";
+
+.single {
+  @extend .bg-white;
+  @extend .container;
+  margin-top: 0;
+  padding: 0 0 2rem;
+
+  .cover {
+    @extend %cover;
+    height: 40vh;
+    margin-bottom: 1rem;
+  }
+
+  .categories {
+    @extend %categories-badges;
+  }
+
+  .tags {
+    @extend %tags-badges;
+  }
+
+  .main {
+    font-size: 1.2rem;
+    font-weight: 200;
+    line-height: 1.58;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    h1, h2, h3, h4, h5 {
+      font-weight: 700;
+      color: #222;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      margin-top: 0.78rem;
+      margin-bottom: 0.3rem;
+      //font-size: 1.7rem;
+    }
+
+    p {
+    }
+
+    .figure {
+      width: 100%;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    pre {
+      width: 100%;
+      background-color: #1b1e21;
+      color: #2daf10;
+      border: 1px solid #222;
+      border-radius: 0.9em;
+      padding: 1em;
+    }
+
+    blockquote {
+      width: 80%;
+      margin: auto;
+      display: inline-block;
+      color: #5d5d5d;
+    }
+  }
+
+  .subscribe {
+    @extend %subscribe;
+  }
+}

@@ -1,0 +1,46 @@
+// Custom Colors
+// =============
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Quicksand:400,400i,600');
+
+$font-family-base: 'Quicksand', sans-serif;
+$headings-font-family: 'EB Garamond', serif;
+
+$headings-font-family-sans: $font-family-base;
+$headings-small-font-family: $headings-font-family;
+
+@import "./colors.scss";
+
+// Required
+// ========
+@import "../../bootstrap/functions";
+@import "../../bootstrap/variables";
+@import "../../bootstrap/mixins";
+
+// Optional
+// ========
+@import "../../bootstrap/reboot";
+@import "../../bootstrap/type";
+@import "../../bootstrap/print";
+
+// Custom Design
+// =============
+html {
+}
+
+body {
+  background: url("/pattern.png") repeat;
+  scroll-behavior: smooth;
+}
+
+.redirection {
+  @extend .container;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+@import "./components/header";
+@import "./components/footer";
+@import "./components/landing";
+@import "./components/posts";
+@import "./components/post";
+@import "./components/pagination";

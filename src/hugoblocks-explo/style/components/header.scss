@@ -1,0 +1,57 @@
+@import "../../../bootstrap/_navbar";
+@import "../../../bootstrap/_transitions.scss";
+@import "../../../bootstrap/utilities/_flex";
+@import "../../../bootstrap/utilities/_background";
+@import "../../../bootstrap/utilities/_display";
+@import "../../../bootstrap/utilities/_align";
+@import "../utils";
+
+.header {
+  @extend .container-fluid;
+  @extend .bg-translucent;
+  padding: 0;
+}
+
+.main-navbar {
+  @extend .navbar;
+  @extend .navbar-expand-md;
+  @extend .navbar-dark;
+  @extend .justify-content-center;
+
+  .brand {
+    @extend .navbar-brand;
+
+    img {
+      @extend .d-inline-block;
+      @extend .align-top;
+      height: 42px;
+    }
+  }
+
+  .collapse-button {
+    @extend .navbar-toggler;
+    @extend .nav-link;
+    @extend .align-middle;
+  }
+
+  .collapsable-content {
+    @extend .collapse;
+    @extend .navbar-collapse;
+
+    & > div {
+      @extend .navbar-nav;
+      @extend .justify-content-center;
+    }
+
+    a {
+      @extend .nav-link;
+      margin-left: 1rem;
+      text-align: center;
+
+      &:hover {
+        opacity: 0.9;
+        text-decoration: none;
+      }
+    }
+  }
+}

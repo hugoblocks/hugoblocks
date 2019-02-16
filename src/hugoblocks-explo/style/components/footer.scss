@@ -1,0 +1,29 @@
+@import "../../../bootstrap/grid";
+@import "../../../bootstrap/utilities/flex";
+@import "../../../bootstrap/utilities/text";
+@import "../utils";
+
+.footer {
+  @extend .container;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+
+  .copyright {
+    text-align: center;
+    color: $white;
+  }
+
+  .links {
+    @extend .row;
+    @extend .text-center;
+    @extend .justify-content-center;
+
+    .link {
+      @extend .col-2;
+
+      a {
+        @extend .btn-circle;
+      }
+    }
+  }
+}

@@ -1,7 +1,5 @@
 # HugoBlocks
 
-## Current version: 0.0.1
-
 ## Blocks
 
 ```
@@ -86,3 +84,7 @@
 
 - [ ] Multi-author support with cards & author links
 
+## How to build
+
+```bash
+```

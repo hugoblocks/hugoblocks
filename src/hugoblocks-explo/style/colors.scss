@@ -1,0 +1,25 @@
+$white: #FFF;
+$dark: #222;
+$corporate-grey: #565657;
+
+$heavy-purple: #140D22;
+$discrete-purple: #211734;
+$vibrant-purple: #8B5AE3;
+
+$heavy-yellow: #F1B61A;
+$warm-yellow: #F1B61A;
+
+$primary: $warm-yellow;
+
+// ## Override Bootstrap Defaults
+$primary: $warm-yellow;
+$secondary: $vibrant-purple;
+$info: $discrete-purple;
+
+$body-bg: $heavy-purple;
+$body-color: $white;
+
+$body-bg-invert: $warm-yellow;
+$body-color-invert: $dark;
+$headings-color-invert: $white;
+

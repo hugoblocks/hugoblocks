@@ -1,0 +1,36 @@
+@import "../../../bootstrap/grid";
+@import "../../../bootstrap/utilities/flex";
+@import "../../../bootstrap/utilities/text";
+@import "../utils";
+
+.footer {
+  @extend .container-fluid;
+  margin-top: 4rem;
+  min-height: 20vh;
+  background-color: darken($primary, 20%);
+  color: $white;
+  padding: 2rem;
+
+  .copyright {
+    text-align: center;
+  }
+
+  .copyright {
+    text-align: center;
+    color: $white;
+  }
+
+  .links {
+    @extend .row;
+    @extend .text-center;
+    @extend .justify-content-center;
+
+    .link {
+      @extend .col-2;
+
+      a {
+        @extend .large-link;
+      }
+    }
+  }
+}

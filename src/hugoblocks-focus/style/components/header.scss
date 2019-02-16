@@ -1,0 +1,54 @@
+@import "../../../bootstrap/_navbar";
+@import "../../../bootstrap/_transitions.scss";
+@import "../../../bootstrap/utilities/_flex";
+@import "../../../bootstrap/utilities/_background";
+@import "../../../bootstrap/utilities/_display";
+@import "../../../bootstrap/utilities/_align";
+@import "../utils";
+
+.header {
+  @extend .container;
+  // @extend .bg-white;
+  padding: 0;
+}
+
+.main-navbar {
+  @extend .navbar;
+  @extend .navbar-expand-md;
+  @extend .justify-content-center;
+
+  .brand {
+    @extend .navbar-brand;
+
+    img {
+      @extend .d-inline-block;
+      @extend .align-baseline;
+      height: 42px;
+    }
+  }
+
+  .collapse-button {
+    @extend .navbar-toggler;
+    @extend .nav-link;
+    @extend .align-middle;
+  }
+
+  .collapsable-content {
+    @extend .collapse;
+    @extend .navbar-collapse;
+    @extend .justify-content-center;
+
+    & > div {
+      @extend .navbar-nav;
+    }
+
+    a {
+      @extend .nav-link;
+      margin-left: 1rem;
+
+      &:hover {
+        color: $primary !important;
+      }
+    }
+  }
+}
