@@ -1,0 +1,12 @@
+name = "hugoblocks"
+license = "MIT"
+licenselink = "https://github.com/lsenta/hugoblocks/blob/master/LICENSE.md"
+description = "TBD"
+homepage = "https://github.com/lsenta/hugoblocks"
+min_version = "0.54"
+tags = ["landing", "blog", "blocks", "hugoblocks"]
+features = ["blog", "disqus", "google analytics", "pagination", "rss"]
+[author]
+  name = "Laurent Senta"
+  homepage = "https://www.lsenta.io"
+

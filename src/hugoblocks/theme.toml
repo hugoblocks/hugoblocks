@@ -1,0 +1,12 @@
+name = "hugoblocks-explo"
+license = "MIT"
+licenselink = "https://github.com/lsenta/hugoblocks/blob/master/LICENSE.md"
+description = "Explo is a clean and simple theme for explorers"
+homepage = "https://github.com/HugoBlocks/hugo-theme-explo"
+min_version = "0.54"
+tags = ["landing", "blog", "blocks", "hugoblocks", "dark", "purple", "yellow"]
+features = ["blog", "disqus", "google analytics", "pagination", "rss"]
+[author]
+  name = "Laurent Senta"
+  homepage = "https://www.lsenta.io"
+
