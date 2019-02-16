@@ -4,8 +4,8 @@
   "private": true,
   "description": "Hugo Theme: Hugoblocks build-tools (bootstrap, sass)",
   "scripts": {
-    "build": "node-sass-chokidar --source-map true ./src/main.scss -o ./static/css/",
-    "watch": "chokidar 'src/**/*.scss' -c 'npm run build'"
+    "build:all": "./build.sh all",
+    "watch:all": "find ./src | entr -d ./build.sh all"
   },
   "author": "lsenta",
   "license": "MIT",
