@@ -49,7 +49,7 @@ if [[ -z "${args[0]}" ]]; then
   >&2 echo "no project given."; usage; exit 1;
 fi
 
-ALL_PROJECTS=(explo flow focus zeno)
+ALL_PROJECTS=(explo flow focus zeno buidl)
 
 if [ "${args[0]}" == "all" ]; then
   for project in ${ALL_PROJECTS[*]}; do
